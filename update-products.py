@@ -18,15 +18,15 @@ with open(creds_file_path) as f:
         line = line.strip()
         if line.startswith("[") and line.endswith("]"):
             current_section = line[1:-1]
-        elif current_section == "sanramon.doap.com":
+        elif current_section == "danville.doap.com":
             key, value = line.split(" = ")
             credentials[key] = value
 openai.api_key = credentials["openai.api_key"]
 auth = (
-    credentials["sanramon.doap.com_consumer_key"],
-    credentials["sanramon.doap.com_consumer_secret"]
+    credentials["danville.doap.com_consumer_key"],
+    credentials["danville.doap.com_consumer_secret"]
     )
-base_url = "https://sanramon.doap.com/wp-json/wc/v3/products"
+base_url = "https://danville.doap.com/wp-json/wc/v3/products"
 counter = 0
 page = 1
 while True:
