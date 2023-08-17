@@ -11,7 +11,7 @@ if not nltk.data.find('tokenizers/punkt'):
 credentials = {}
 creds_file_path = os.path.join(
           os.path.dirname(os.path.abspath(__file__)),
-          "creds.txt"
+          "../danville.txt"
           )
 
 with open(creds_file_path) as f:
@@ -30,8 +30,6 @@ auth = (
     credentials["sanramon.doap.com_consumer_key"],
     credentials["sanramon.doap.com_consumer_secret"]
     )
-
-openai.api_key = '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'
 
 page = 1
 while True:

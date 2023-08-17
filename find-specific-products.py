@@ -34,7 +34,7 @@ auth = (
 base_url = "https://danville.doap.com/wp-json/wc/v3/products"
 counter = 0
 page = 1
-targets = [20850, 44681, 20700-1]  # Specify the target product IDs
+targets = [20850, 20800, 20700-1]  # Specify the target product IDs
 
 while True:
     response = requests.get(f'{base_url}?page={page}&per_page=10', auth=auth)
